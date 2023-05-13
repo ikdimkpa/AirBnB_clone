@@ -2,7 +2,7 @@
 
 """
 BaseModel module that defines all the common attributes/methods
-for other classes
+for other classes.
 """
 from datetime import datetime
 import models
@@ -10,10 +10,13 @@ import uuid
 
 
 class BaseModel:
-    """Base Model"""
+    """Base Model; base class of all the classes that would be
+       created for this project.
+    """
     def __init__(self, *args, **kwargs):
         """
-        Instance Attributes
+        Instance Attributes; initializes the base model class into
+        all it's sub-classes
         """
         if kwargs and kwargs != {}:
             for key, value in kwargs.items():

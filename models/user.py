@@ -9,7 +9,8 @@ from models.base_model import BaseModel
 
 class User(BaseModel):
     """
-    class for user
+    class for user; stores and returns
+    identification details of customers
     """
     email = ""
     password = ""

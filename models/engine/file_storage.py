@@ -58,7 +58,7 @@ class FileStorage():
 
     def reload(self):
         """
-        Derializes json object from file
+        Deserializes json object from file
         """
         if os.path.exists(self.__file_path):
             with open(self.__file_path, 'r') as a_file:

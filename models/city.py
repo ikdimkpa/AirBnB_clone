@@ -10,7 +10,8 @@ from models.base_model import BaseModel
 
 class City(BaseModel):
     """
-    class City
+    class City; returns the location of the
+    house to be rented
     """
     state_id = ""
     name = ""

@@ -8,7 +8,9 @@ from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """class Place"""
+    """class Place; full description of
+       the house to be rented
+    """
 
     city_id = ""
     user_id = ""
