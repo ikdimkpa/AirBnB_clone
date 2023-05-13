@@ -61,3 +61,4 @@ class BaseModel:
         dic_obj["created_at"] = dic_obj["created_at"].isoformat()
         dic_obj["updated_at"] = dic_obj["updated_at"].isoformat()
         return dic_obj
+

@@ -24,3 +24,4 @@ Examples:
 (hbnb) all
 (hbnb) update City 636fef90-1cc6-46e8-a1e4-ebfb6d707660
 (hbnb) count City
+

@@ -6,3 +6,4 @@ my_model.name = "My First Model"
 my_model.my_number = 89
 
 print(type(my_model))
+
