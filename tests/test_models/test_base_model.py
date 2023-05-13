@@ -66,3 +66,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_obj_instance(self):
         self.assertTrue(isinstance(self.base1, BaseModel))
+
+
+if __name__ == "__main__":
+    unittest.main()

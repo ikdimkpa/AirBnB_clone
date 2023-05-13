@@ -86,3 +86,7 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(type(self.amenity2_dict["__class__"]) == str)
         self.assertTrue(type(self.amenity2_dict["created_at"]) == str)
         self.assertTrue(type(self.amenity2_dict["updated_at"]) == str)
+
+
+if __name__ == "__main__":
+    unittest.main()

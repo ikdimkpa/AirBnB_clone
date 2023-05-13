@@ -92,3 +92,7 @@ class TestReview(unittest.TestCase):
         self.assertTrue(type(self.review2_dict["__class__"]) == str)
         self.assertTrue(type(self.review2_dict["created_at"]) == str)
         self.assertTrue(type(self.review2_dict["updated_at"]) == str)
+
+
+if __name__ == "__main__":
+    unittest.main()
