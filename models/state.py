@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-State Module
+Module for class Place that inherits
+from class BaseModel
 """
 from models.base_model import BaseModel
 
@@ -10,9 +11,3 @@ class State(BaseModel):
     """class State"""
 
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        """
-        Initializing class State
-        """
-        BaseModel.__init__(self, *args, **kwargs)

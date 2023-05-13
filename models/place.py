@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+Module for class Place that inherits
+from class BaseModel
+"""
 from models.base_model import BaseModel
 
 
@@ -17,9 +21,3 @@ class Place(BaseModel):
     latitude = float(0.0)
     longitude = float(0.0)
     amenity_ids = ""
-
-    def __init__(self, *args, **kwargs):
-        """
-        Initializing class Place
-        """
-        BaseModel.__init__(self, *args, **kwargs)

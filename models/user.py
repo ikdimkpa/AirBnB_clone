@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-User Module
+Module for class Place that inherits
+from class BaseModel
 """
 from models.base_model import BaseModel
 
@@ -14,9 +15,3 @@ class User(BaseModel):
     password = ""
     first_name = ""
     last_name = ""
-
-    def __init__(self, *args, **kwargs):
-        """
-        Initializing the User Class
-        """
-        BaseModel.__init__(self, *args, **kwargs)
