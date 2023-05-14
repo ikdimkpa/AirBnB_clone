@@ -5,6 +5,7 @@ Unittest Cases for class BaseModel
 """
 
 import io
+import os
 import unittest
 from datetime import datetime
 from models.base_model import BaseModel
@@ -18,8 +19,21 @@ class TestBaseModel(unittest.TestCase):
         self.base1 = BaseModel()
         self.base2 = BaseModel()
 
+        try:
+            os.remove("file.json")
+        except IOError:
+            pass
+
     def tearDown(self):
         """Tear Down instances"""
+        try:
+            os.remove("file.json")
+        except IOError:
+            pass
+        try:
+            os.rename("file1.json", "file.json")
+        except IOError:
+            pass
 
     def test_id_is_string(self):
         """
