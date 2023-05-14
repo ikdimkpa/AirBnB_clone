@@ -5,6 +5,7 @@ Unittest Cases for class BaseModel
 """
 
 import io
+import os
 import unittest
 from datetime import datetime
 from models.base_model import BaseModel
@@ -13,13 +14,28 @@ from unittest.mock import patch
 
 class TestBaseModel(unittest.TestCase):
     """All Test Cases"""
-    def setUp(self):
+    @classmethod
+    def setUp(cls):
         """Sets up instances"""
-        self.base1 = BaseModel()
-        self.base2 = BaseModel()
+        cls.base1 = BaseModel()
+        cls.base2 = BaseModel()
 
-    def tearDown(self):
+        try:
+            os.rename("file.json", "file1.json")
+        except IOError:
+            pass
+
+    @classmethod
+    def tearDown(cls):
         """Tear Down instances"""
+        try:
+            os.remove("file.json")
+        except IOError:
+            pass
+        try:
+            os.rename("file1.json", "file.json")
+        except IOError:
+            pass
 
     def test_id_is_string(self):
         """

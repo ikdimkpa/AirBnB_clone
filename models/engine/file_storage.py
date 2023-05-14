@@ -67,4 +67,3 @@ class FileStorage():
                 self.__objects[key] = eval(val["__class__"])(**val)
         else:
             pass
-
