@@ -14,17 +14,19 @@ from unittest.mock import patch
 
 class TestBaseModel(unittest.TestCase):
     """All Test Cases"""
-    def setUp(self):
+    @classmethod
+    def setUp(cls):
         """Sets up instances"""
-        self.base1 = BaseModel()
-        self.base2 = BaseModel()
+        cls.base1 = BaseModel()
+        cls.base2 = BaseModel()
 
         try:
-            os.remove("file.json")
+            os.rename("file.json", "file1.json")
         except IOError:
             pass
 
-    def tearDown(self):
+    @classmethod
+    def tearDown(cls):
         """Tear Down instances"""
         try:
             os.remove("file.json")
