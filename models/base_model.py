@@ -13,11 +13,15 @@ class BaseModel:
     """Base Model; base class of all the classes that would be
        created for this project.
     """
+
+
     def __init__(self, *args, **kwargs):
         """
         Instance Attributes; initializes the base model class into
         all it's sub-classes
         """
+
+
         if kwargs and kwargs != {}:
             for key, value in kwargs.items():
                 if key == "__class__":
@@ -40,7 +44,10 @@ class BaseModel:
         """
         prints ==> [<class name>] (<self.id>) <self.__dict__>
         """
+        
+
         return ("[{}] ({}) {}".format(
+        
             type(self).__name__, self.id, self.__dict__))
 
     def save(self):
@@ -48,6 +55,8 @@ class BaseModel:
         Updates the public instance attribute updated_at
         with the current datetime
         """
+
+
         self.updated_at = datetime.now()
         models.storage.save()
 
@@ -64,3 +73,4 @@ class BaseModel:
         dic_obj["created_at"] = dic_obj["created_at"].isoformat()
         dic_obj["updated_at"] = dic_obj["updated_at"].isoformat()
         return dic_obj
+    print("")
