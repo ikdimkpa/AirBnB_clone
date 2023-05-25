@@ -1,0 +1,17 @@
+header {
+	background-color: #FFF;
+	height: 70px;
+	width: 100%;
+	margin: 0;
+	border-bottom: 1px solid #CCCCCC;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: 20px 50%;
+}
+
+/*MEDIA QUERIES -  FOR SMALL SCREEN SIZES*/
+@media screen and (max-width:36em){
+	header{
+		background-position:  50% 50%;
+	}
+}
